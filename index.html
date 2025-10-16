@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/mono-blue.css" />
+    <link rel="stylesheet" href="styles.css"></link>
+    <title>Le Versioning</title>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides parchemin">
+
+        <!-- Title Slide -->
+        <section class="no-blur">
+            <div class="cv titre">
+                <div class="item">
+                    <h1>Le Versioning</h1>
+                    <h2>Git, GitHub, GitLab</h2>
+                </div>
+                <div class="item">
+                    <p class="p-titre">Pierre FERVEL</p>
+                    <p class="p-titre">Max Digital Services</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <img src="./assets/moi.jpg" alt="Merci" style="height:700px;width:auto" />
+                    </div>
+                    <div class="item mes-infos">
+                        <p class="mon-nom">Pierre FERVEL</p>
+                        <p>Développeur Fullstack <span class="digital">Angular</span> / <span class="serv">Java</span></p>
+                        <p>Speaker (Max Digital Services, BreizhCamp, Devfest)</p>
+                        <p>Jammer en jeux vidéos</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Git GitHub Historic -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Git : historique et évolution</h2>
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXo2a3Iycmo4cXhrMzZyY3ozNnk4M2Zwam5waGg1Mmt3ZW82dG1mMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lDfJLvOE2nRyKDjWHP/giphy.gif" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>👨‍🎓 Pourquoi le versionning est apparu</h2>
+                        <p>
+                            Avant Git, la gestion des versions était souvent centralisée, peu efficace, et plusieurs problèmes se posaient:
+                        </p>
+                        <ul>
+                            <li>Risque de perte de travail.</li>
+                            <li>Difficulté à collaborer et à gérer les conflits.</li>
+                            <li>Manque d’outils pour revenir aux versions antérieures facilement.</li>
+                        </ul>
+                        <p>
+                            Le versioning est apparu pour répondre à ces besoins, améliorer la collaboration et sécuriser le code.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <p>
+                            En 2005, <em>Linus Torvalds</em> crée Git, un système de gestion de version distribué performant et robuste, suite à la fin de l’utilisation de BitKeeper.
+                        </p>
+                        <img src="./assets/Linus-Torvalds.webp" style="height: 45%;">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- GitLab -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Le cas GitLab</h2>
+                        <img src="./assets/gitlab.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>🦊 GitLab : histoire et positionnement</h2>
+                        <p>
+                            GitLab est créé en 2011 par <em>Dmitriy Zaporozhets</em> et <em>Valery Sizov</em> comme une alternative open-source à GitHub.
+                        </p>
+                        <img src="./assets/dimitri_valery.webp" style="height: 35%;">
+                        <p>
+                            GitLab se distingue par son intégration complète des outils DevOps, notamment CI/CD natif, et par la possibilité d’auto-hébergement.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🆚 Comparatif GitHub / GitLab</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspect</th>
+                                    <th>GitHub</th>
+                                    <th>GitLab</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Philosophie</td>
+                                    <td>Propriétaire sous Microsoft</td>
+                                    <td>Open source, auto-hébergement possible</td>
+                                </tr>
+                                <tr>
+                                    <td>Hébergement</td>
+                                    <td>Cloud uniquement</td>
+                                    <td>Cloud ou serveurs privés</td>
+                                </tr>
+                                <tr>
+                                    <td>CI/CD</td>
+                                    <td>Souvent via outils externes</td>
+                                    <td>Intégré natif</td>
+                                </tr>
+                                <tr>
+                                    <td>Workflow</td>
+                                    <td>GitHub Flow basé sur Pull Request</td>
+                                    <td>Branches multiples et gestion avancée</td>
+                                </tr>
+                                <tr>
+                                    <td>DevOps</td>
+                                    <td>Pas natif</td>
+                                    <td>Kubernetes et outils DevOps natifs</td>
+                                </tr>
+                                <tr>
+                                    <td>Communauté Open Source</td>
+                                    <td>Majoritairement propriétaire</td>
+                                    <td>Code 100% public</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            GitLab se démarque par sa flexibilité et son modèle communautaire, tandis que GitHub reste le leader du social coding et de la visibilité open source.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Install Git et création compte GitHub -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Installons Git et créons un compte GitHub</h2>
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzU0b2U3aW9xdnk4cG14cTZvZ3Bzd2FzaThmMWg0ZDRhbTNjNmtweCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mq5y2jHRCAqMo/giphy.gif" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>💻 Installation de Git et création de compte GitHub</h2>
+                        <h3>Installer Git sur Windows</h3>
+                        <ol>
+                            <li>Télécharger Git depuis <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></li>
+                            <li>Lancer l’installateur, garder les options par défaut. <em>A l'exception de Nano, beaucoup plus abordable que Vim</em></li>
+                            <li>Ouvrir Git Bash et vérifier l’installation : <code>git --version</code></li>
+                            <li>Configurer votre nom et email pour Git :
+                                <pre><code>git config --global user.name "Votre Nom"
+git config --global user.email "votre.email@example.com"</code></pre>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🛜 Créer un compte GitHub</h3>
+                        <ol>
+                            <li>Aller sur <a href="https://github.com">https://github.com</a> et cliquer sur « Sign up »</li>
+                            <li>Entrer un email valide, un mot de passe, un nom d’utilisateur</li>
+                            <li>Valider le compte via l’email reçu</li>
+                        </ol>
+                        <p><em>Votre compte GitHub sera votre identité</em> dans la communauté open source.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Git Bases -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Git : Découverte des fonctionnalités</h2>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3NlNWdzZWthbXF6dXNlcGtxcjRzMDI1NWIxdjc5aW5hdHBhY2ExZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ztfno2Qtm2dVxS81f5/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>1️⃣ Les bases de Git</h2>
+                        <p>Git est un système décentralisé qui permet de créer des snapshots de votre travail.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🔑 Concepts clés</h3>
+                        <ul>
+                            <li>Repository (dépôt) : lieu où est stocké le code et son historique.</li>
+                            <li>Commit : snapshot, point dans le temps avec un message description.</li>
+                            <li>Branch (branche) : version parallèle pour travailler sur une fonctionnalité.</li>
+                            <li>Merge : réunion de deux branches en une seule.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⌨️ Commandes principales</h3>
+                        <ul>
+                            <li><code>git init</code> : créer un dépôt.</li>
+                            <li><code>git add</code> : préparer les fichiers pour le commit.</li>
+                            <li><code>git commit -m "message"</code> : enregistrer les modifications.</li>
+                            <li><code>git status</code> : afficher l’état du dépôt.</li>
+                            <li><code>git log</code> : afficher l’historique des commits.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- TP01: Create Repo -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>TP</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>👨‍💻 TP01 : Créer un dépôt Git et le pousser sur GitHub</h2>
+                        <ol>
+                            <li>Créer un nouveau dossier local.</li>
+                            <li>Initialiser un dépôt avec <code>git init</code>.</li>
+                            <li>Créer un fichier <code>README.md</code> avec une description du projet.</li>
+                            <li>Créer un projet web rapide. Ajouter les fichiers avec <code>git add .</code>.</li>
+                            <li>Faire un commit initial avec <code>git commit -m "Initial commit"</code>.</li>
+                            <li>Rappeler dans ce fichier <code>README.md</code> ce que sont les repositories, les commits, les branches et les merges.</li>
+                            <li>Créer un nouveau commit avec un nom de commit parlant</li>
+                            <li>Vérifier que vous n'avez plus de fichiers en attente de commit.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Historique des branches -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Utiliser Git pour stocker du code à distance</h2>
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmlkaDZpM2d3OTJzdW1tbTAxdWJkaWMyZWhkM3V4a3FuNms5a3RmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zhbrTTpmSCYog/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section"> 
+                <div class="ch"> 
+                    <div class="item"> 
+                        <h2>🏪 Dépôts locaux et distants</h2> 
+                        <p> <strong>GitHub</strong> permet de stocker et partager son code sur Internet, pour collaborer facilement en équipe. </p> 
+                        <ul> 
+                            <li>Un <strong>dépôt local</strong> est sur ton ordinateur.</li> 
+                            <li>Un <strong>dépôt distant</strong> est hébergé sur GitHub (ou GitLab, Bitbucket...)</li> 
+                        </ul> 
+                        <h3>Pourquoi synchroniser ?</h3> 
+                        <ul> 
+                            <li>Partager tes modifications</li> 
+                            <li>Accéder au code de l’équipe</li> 
+                            <li>Travailler de plusieurs ordinateurs</li> 
+                        </ul> 
+                    </div> 
+                </div>
+            </section> 
+            <section class="inner-section"> 
+                <div class="ch"> 
+                    <div class="item"> 
+                        <h2>⌨️ Commandes clés : lier et synchroniser</h2> 
+                        <p> <code>git remote add origin URL_DU_DEPOT</code> : Connecte ton dépôt local à GitHub. </p> 
+                        <p> <code>git push</code> : Envoie tes commits locaux vers GitHub.</p> 
+                        <p> <code>git pull</code> : Récupère les dernières modifications de GitHub.</p> 
+                        <div style="margin-top: 2em;"> 
+                            <h3>⚠️ Travailler toujours à jour pour éviter les conflits ! ⚠️</h3> 
+                        </div> 
+                    </div> 
+                </div>
+            </section> 
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>TP</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>👨‍💻 TP02 : Création de votre dépôt Git</h2>
+                        <ol>
+                            <li>Créer un dépôt distant sur GitHub.</li>
+                            <li>Relier le dépôt local au dépôt distant.</li>
+                            <li>Tenter un <code>git push</code> pour envoyer les commits locaux. Que constatez-vous ?</li>
+                            <li>Envoyer les commits précédents sur GitHub : <code>git push -u origin main</code>. (<em>Bonus: Que signifie ce <code>-u</code> ?</em>)</li>
+                            <li>Vérifier sur GitHub la présence du projet et des modifications.</li>
+                            <li>Envoyer moi vos liens vers vos dépôts GitHub.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Branching -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Branching</h2>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnFoOTFmcHBtb3RvaTd0cG5wMjNqYTZ3eXJtZDMyNW1memw3OXpjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jcxHtV7dyQoeeiMw1Z/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>🌲 Le branching dans Git</h2>
+                        <p>Les branches permettent de travailler sur des fonctionnalités indépendantes sans impacter la branche principale.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⌨️ Commandes utiles</h3>
+                        <ul>
+                            <li><code>git branch</code> : liste les branches.</li>
+                            <li><code>git branch nom_branche</code> : créer une nouvelle branche.</li>
+                            <li><code>git checkout nom_branche</code> : basculer sur une branche.</li>
+                            <li><code>git merge nom_branche</code> : fusionner une branche dans la branche courante.</li>
+                        </ul>
+                        <p>Les branches facilitent la collaboration et la gestion de versions.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Git Rebase vs Git Merge -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Fusion de branches</h2>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXB6cXBwMXIxcGFtOWs5eGQ4eDVjajI4ZTg0dWhpaW9pYnBhaGRydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PvDM6QHuLPCxi/giphy.gif" style="height: 125%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>🆚 Git Rebase vs Git Merge</h2>
+                        <p>
+                            <strong>Merge</strong> crée un commit spécial qui fusionne deux branches, conservant l’historique entier.
+                        </p>
+                        <p>
+                            <strong>Rebase</strong> réapplique les commits d’une branche par-dessus une autre, produisant un historique linéaire et plus propre.
+                        </p>
+                        <h3>Avantages et inconvénients</h3>
+                        <ul>
+                            <li><strong>Merge</strong>: Historique complet, mais conflits plus visibles.</li>
+                            <li><strong>Rebase</strong>: Historique plus lisible, mais possible perte de contexte.</li>
+                        </ul>
+                        <p>Choisir selon le contexte et la politique d’équipe.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- TP02: Git Branching -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>TP</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>👨‍💻 TP03 : Branching Git</h2>
+                        <ol>
+                            <li>À partir de votre projet précédent, créez une branche <code>featureX</code>.</li>
+                            <li>Basculer sur cette branche.</li>
+                            <li>Faire des modifications sur votre projet, puis committer ces changements.</li>
+                            <li>Revenir à la branche principale <code>main</code>.</li>
+                            <li>Créer un tag de cette version : <code>git tag v1.0</code>. (<em>Bonus: Si vous voulez vous pouvez créer un tag annoté.</em>)</li>
+                            <li>Fusionner la branche <code>featureX</code>.</li>
+                            <li>Supprimer localement la branche <code>featureX</code>.</li>
+                            <li>Envoyer les changements sur GitHub. Quelle commande utilisez-vous ?</li>
+                            <li>Vérifier sur GitHub la présence du tag et des modifications.</li>
+                            <li>Envoyer moi vos liens vers vos dépôts GitHub.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Branching avancé -->
+        <section> 
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Git, un outil de collaboration</h2>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3YwMmc2ZW5vZG5hbXNlMDh1MGl2eXoxY2s4Z3FjZXphbmNxNHBkeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Av9l0VIc01y1isrDw/giphy.gif" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section"> 
+                <div class="ch"> 
+                    <div class="item"> 
+                        <h2>🌲 Branches et collaboration</h2> 
+                        <p><strong>Brancher</strong> = Travailler sur une nouvelle fonctionnalité sans toucher au code principal.</p> 
+                        <ul> 
+                            <li><strong>main/master</strong> : branche principale et stable</li> 
+                            <li><strong>feature/...</strong> : créer une branche pour une nouveauté</li> 
+                        </ul> 
+                        <p><strong>Avantages :</strong></p> 
+                        <ul> 
+                            <li>Expérimenter sans risque</li> 
+                            <li>Collaborer efficacement</li> 
+                        </ul> 
+                    </div> 
+                </div>
+            </section> 
+            <section class="inner-section"> 
+                <div class="ch"> 
+                    <div class="item"> 
+                        <h2>🫂 Fusions et gestion des conflits</h2> 
+                        <p> <strong>Fusionner (merge)</strong> = Réunir plusieurs branches en une seule.<br/> <strong>Conflit</strong> = Deux personnes modifient la même ligne. </p> 
+                        <h3>Comment gérer un conflit ?</h3> 
+                        <ul> 
+                            <li>Git signale les fichiers en conflit</li> 
+                            <li>Modifier le code pour choisir la bonne version</li> 
+                            <li>Enregistrer et poursuivre le merge</li> 
+                        </ul> 
+                        <p>Utiliser un éditeur ou un outil graphique aide à visualiser les conflits !</p> 
+                    </div> 
+                </div>
+            </section> 
+        </section>
+
+        <!-- TP04: Collaboration -->
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>TP</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>👨‍💻 TP04 : Merge et conflits</h2>
+                        <ol>
+                            <li>Deux élèves clonent le même projet. <code>featureX</code>.</li>
+                            <li>Élève A crée une branche <code>fixed-typo</code>, modifie des fichiers dans le projet, commit, et pousse cette branche.</li>
+                            <li>Élève B crée une branche <code>update-fonctions</code>, modifie les mêmes lignes des fichiers de son voisin (avec une autre correction), commit et pousse.</li>
+                            <li>Détectez un conflit en essayant de fusionner <code>update-fonctions</code> dans <code>main</code>.</li>
+                            <li>Récupérez la branche <code>main</code> localement et tentez la fusion pour forcer le conflit.</li>
+                            <li>Résolvez manuellement le conflit dans les fichiers concernés.</li>
+                            <li>Finalisez la fusion par un commit.</li>
+                            <li>Envoyer moi vos liens vers vos dépôts GitHub.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Ne pas tout envoyer</h2>
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjc2aWtmNXkzeXRzY3pscmJjaGw5d3BhMjh2cmdtZmE5MjBhMnoxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bHxxNE7lpALYgMVyyD/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Le fichier .gitignore</h2>
+                        <p>
+                            <strong>Fonctionnement :</strong><br/>
+                            Liste les fichiers et dossiers que Git doit ignorer (ne pas suivre ni versionner).
+                        </p>
+                        <p>
+                            <strong>Intérêt :</strong><br/>
+                            Éviter de committer des fichiers temporaires, sensibles ou volumineux.
+                        </p>
+                        <h3>Exemple de contenu</h3>
+                        <pre><code data-trim>
+# Fichiers logs
+*.log
+
+# Dossier des dépendances Node.js
+node_modules/
+
+# Configuration IDE
+.vscode/
+
+# Fichiers d'environnement
+.env
+                        </code></pre>
+                        <p>
+                            <strong>Conseil :</strong> Toujours versionner un .gitignore adapté pour garder un dépôt propre.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- Manipulation d'historique -->
+         <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Manipuler l'historique de Git</h2>
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXNqcmhkaXAyY2t3YndpMW12cHZvbXhoMm81a2JsYWozc3Qzd2ZlaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12NUbkX6p4xOO4/giphy.gif" style="height: 115%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Parcourir et manipuler l’historique Git</h2>
+                        <ul>
+                            <li>
+                                <strong>git log</strong>
+                                <pre><code data-trim>
+        git log --oneline --graph --decorate
+                                </code></pre>
+                                Affiche un historique clair et visuel des commits.
+                            </li>
+                            <li>
+                                <strong>git reflog</strong>
+                                <pre><code data-trim>
+        git reflog
+                                </code></pre>
+                                Remonte tous les mouvements de HEAD (utile pour retrouver des états perdus).
+                            </li>
+                            <li>
+                                <strong>git reset</strong>
+                                <pre><code data-trim>
+        git reset --hard &lt;commit&gt;
+                                </code></pre>
+                                Replace le dépôt à un commit antérieur (⚠️ destructif).
+                            </li>
+                            <li>
+                                <strong>git revert</strong>
+                                <pre><code data-trim>
+        git revert &lt;commit&gt;
+                                </code></pre>
+                                Crée un nouveau commit annulant un changement sans casser l’historique.
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>Astuce :</strong> bien vérifier avant d’utiliser <code>reset --hard</code> !
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Sauvegarder / Restaurer / Appliquer</h2>
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmplNXRvODcyam1lMmFxOXZuaDljYWMxa2ZraHZvbHNjcDI5eWZxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/du9tUy0lntYsqGF2Ye/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>La force de git stash</h3>
+                        <ul>
+                            <li>
+                                <strong>git stash</strong>
+                                <pre><code data-trim>
+        git stash
+                                </code></pre>
+                                Met de côté temporairement tes modifications non validées.
+                            </li>
+                            <li>
+                                <strong>git stash list</strong>
+                                <pre><code data-trim>
+        git stash list
+                                </code></pre>
+                                Affiche toutes les sauvegardes en attente (stash).
+                            </li>
+                            <li>
+                                <strong>git stash apply</strong>
+                                <pre><code data-trim>
+        git stash apply stash@{0}
+                                </code></pre>
+                                Réapplique un stash spécifique sans le supprimer de la liste.
+                            </li>
+                            <li>
+                                <strong>git stash pop</strong>
+                                <pre><code data-trim>
+        git stash pop
+                                </code></pre>
+                                Réapplique et supprime le dernier stash de la liste.
+                            </li>
+                        </ul>
+                        <p>
+                            <strong>Astuce&nbsp;:</strong> Utilise <code>git stash</code> pour mettre tes changements en pause et basculer sur une autre tâche sans stress&nbsp;!
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Du versioning et de la gestion de code partout</h2>
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXRzZ2kyc25xNWJrd2lzZTdsNXpudG45ZDB5a3R4M3YzMnVzZHBzYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hvMzQ8seIoTbTZBJAM/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Autres systèmes de versioning et gestion de paquets</h2>
+                        <p>
+                            En plus de Git pour le code source, plusieurs outils gèrent les versions de dépendances et paquets.
+                        </p>
+                        <ul>
+                            <li><strong>npm</strong> (Node.js) : versionne et gère les paquets JavaScript via <code>package.json</code>.</li>
+                            <li><strong>Maven</strong> (Java) : système de gestion de projet, de construction et de dépendances avec versioning des artefacts.</li>
+                            <li><strong>Composer</strong> (PHP) : gestionnaire de dépendances avec fichiers <code>composer.json</code>.</li>
+                            <li><strong>pip</strong> (Python) : installe et versionne les paquets Python.</li>
+                        </ul>
+                        <p>
+                            Ces outils permettent d’assurer la cohérence des versions utilisées dans un projet pour faciliter la collaboration.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Fonctionnalités communes</h2>
+                        <ul>
+                            <li>Spécifier les versions exactes ou plages compatibles (ex : semver).</li>
+                            <li>Installer, mettre à jour, supprimer des paquets/dépendances.</li>
+                            <li>Résolution automatique des conflits de versions.</li>
+                            <li>Publication et récupération depuis des registres publics ou privés.</li>
+                        </ul>
+                        <p>Exemple : <code>npm install express@^4.17.1</code> installe une version compatible d’express.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Introduction aux concepts CI/CD et DevOps</h2>
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTAzMzV4YXJ1aDl2eG9sZTNzM3J6a2w5ZjJmOGd6aXJ6NG1vZHc3ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FspLvJQlQACXu/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>💻 DevOps ?</h3>
+                        <ul>
+                            <li><strong>Objectifs :</strong> Automatiser et accélérer la mise à disposition de code fiable</li>
+                            <li>DevOps : collaboration entre développement et exploitation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⚙️ Pourquoi automatiser ?</h3>
+                        <ul>
+                            <li>Valider chaque modification automatiquement pour éviter les régressions</li>
+                            <li>Réduire les erreurs humaines par standardisation</li>
+                            <li>Accélérer le cycle de développement et de déploiement</li>
+                        </ul>
+                        </div>
+                    </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🔑 Différences clés</h3>
+                        <ul>
+                            <li><strong>Intégration Continue (CI)</strong> : fusion fréquente du code, automatisation builds et tests</li>
+                            <li><strong>Livraison Continue (CD)</strong> : préparation automatique du code validé pour déploiement</li>
+                            <li><strong>Déploiement Continu</strong> : publication automatique en production sans intervention humaine</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>📈 Bénéfices</h3>
+                        <ul>
+                            <li>Amélioration qualité logiciel</li>
+                            <li>Réduction du délai de mise sur le marché</li>
+                            <li>Mieux collaborer en équipes</li>
+                            <li>Moins de conflits grâce aux mises à jour fréquentes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Premiers pas sur GitLab.com</h2>
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGZybmRmcWRiZWN1ZXNsbzFydDNzMjZuYWx4eXFjaGt3cDFycjllYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KVlCVET2KEfrq/giphy.gif">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🦊 Créer un compte GitLab</h3>
+                        <ol>
+                            <li>Aller sur <a href="https://gitlab.com" target="_blank">gitlab.com</a></li>
+                            <li>Cliquer sur "Register"</li>
+                            <li>Compléter les champs, valider</li>
+                            <li>Se connecter une fois inscrit</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🖥️ Découverte de l’interface</h3>
+                        <ul>
+                            <li>Tableau de bord : projets récents</li>
+                            <li>Menu latéral : accès aux projets, groupes, issues, CI/CD, pipelines</li>
+                            <li>Barre supérieure : recherche, notifications, paramètres utilisateur</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>💾 Créer un projet</h3>
+                        <ol>
+                            <li>Cliquer sur <em>New Project</em></li>
+                            <li>Choisir entre : projet vide, importer un dépôt, cloner</li>
+                            <li>Donner un nom (ex : <code>demo-ci</code>) et description</li>
+                            <li>Choisir visibilité: privée, interne, publique</li>
+                            <li>Créer et valider</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⚙️ Utiliser votre projet GitLab</h3>
+                        <h4>Créer une clé ssh pour GitLab</h4>
+                        <pre><code>ssh-keygen -t ed25519 -C "gitLabSshKey"
+ssh-add ~/.ssh/gitLabSshKey
+cat ~/.ssh/gitLabSshKey.pub</code></pre>
+                        <h4>Copier la clé publique et l’ajouter dans GitLab sous <em>Settings > SSH Keys</em></h4>
+                        <h4>Cloner le dépôt GitLab</h4>
+                        <pre><code>git clone git@gitlab.com:votre_utilisateur/demo-ci.git</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🦊 Visualiser le projet sur GitLab</h3>
+                        <ul>
+                            <li>Observer le code sur l'interface web</li>
+                            <li>Explorer les onglets <em>Repository</em>, <em>CI/CD</em>, <em>Pipelines</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Définir une pipeline CI/CD</h2>
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTZtNG9ibm56MnNyc3Mzb2N1NndiZG4yMjlydXgzbHExZjM1dDcwMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1Aj4GdLC0amFRv10VT/giphy.gif">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⌨️ Présentation du fichier <code>.gitlab-ci.yml</code></h3>
+                        <ul>
+                            <li>Fichier à la racine du projet qui définit les jobs automatisés</li>
+                            <li>Structure : <strong>stages</strong> (étapes), <strong>jobs</strong>, <strong>scripts</strong>, variables d’environnement</li>
+                        </ul>
+                        <pre><code class="language-yaml">build-job:
+    stage: build
+    script: 
+        - echo "Build en cours !"
+
+test-job:
+    stage: test
+    script:
+        - echo "Tests exécutés"</code></pre>
+                        <p>Chaque stage s'exécute séquentiellement, les jobs au sein d'une même stage peuvent être parallèles.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>⚙️ Qu'est-ce qu'un Runner ?</h3>
+                        <ul>
+                            <li>Agent qui exécute les jobs de la pipeline</li>
+                            <li>GitLab.com fournit des runners partagés prêts à l'emploi</li>
+                            <li>Sur une instance locale, configurer un runner local peut être nécessaire</li>
+                            <li>Vérification des runners via <code>Settings &gt; CI/CD &gt; Runners</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+        </section>
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>TP guidé – Création d’une pipeline simple</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>Objectif</h3>
+                        <p>Écrire un fichier <code>.gitlab-ci.yml</code> progressif pour compiler, tester, puis faire un déploiement fictif.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>Étapes</h3>
+                        <ol>
+                            <li>Créer un job affichant le nom de l'utilisateur GitLab :
+                            <pre><code class="language-yaml">user-echo:
+    stage: build
+    script:
+        - echo "Hello, $GITLAB_USER_LOGIN!"</code></pre>
+                        </li>
+                        <li>Ajouter un job <em>test</em> avec un script simple, par exemple Python ou JS :
+                        <pre><code class="language-yaml">test-job:
+    stage: test
+    script:
+        - echo "Tests en cours..."
+        - python3 -c 'print("Test OK")'</code></pre>
+                        </li>
+                        <li>Ajouter un job <em>deploy</em> fictif :
+                        <pre style="width: 100%;"><code class="language-yaml">deploy-job:
+    stage: deploy
+    script:
+        - echo "Déploiement fictif effectué depuis la branche $CI_COMMIT_BRANCH"</code></pre>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>Observation et débogage</h3>
+                        <ul>
+                            <li>Pousser le <code>.gitlab-ci.yml</code> sur le dépôt GitLab</li>
+                            <li>Suivre l'exécution et les logs via <code>CI/CD &gt; Pipelines</code></li>
+                            <li>Analyser les erreurs YAML ou script pour correction</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Feedback, surveillance et bonnes pratiques</h2>
+                        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHljN2p4MGdhbDEzanJ1MDd0bnB4emN3Y2Q5bnIzdzExOWM2Y2FtdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0HMhOCi7k9BH0BPdM5/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>🗃️ Lire et analyser les logs des jobs</h3>
+                        <ul>
+                            <li>Les logs sont consultables via <code>CI/CD &gt; Pipelines &gt; Jobs &gt; logs</code> sur GitLab</li>
+                            <li>Essentiels pour diagnostiquer et corriger les erreurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>👍 Bonnes pratiques CI/CD</h3>
+                        <ul>
+                            <li>Modularité : pipelines découpés en petits jobs et stages clairs</li>
+                            <li>Utilisation de variables d’environnement pour la configuration</li>
+                            <li>Limiter les secrets, privilégier les variables protégées</li>
+                            <li>Donner aux runners uniquement les accès et permissions dont ils ont vraiment besoin pour faire leur travail : <em>le principe de moindre privilège</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>👀 Surveillance en production</h3>
+                        <ul>
+                            <li>Suivi global des pipelines et historiques</li>
+                            <li>Gestion proactive des erreurs, alertes, notifications par email</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h2>Aller plus loin</h2>
+                        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWszdm11ODQ2MzBqcHpxZ3ljamhqcmV1cmlmMTkyazh0bjIwMTgwdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7ZeLr01g0kAk4K6Q/giphy.gif" style="height: 110%;">
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>↗️ Vers des pipelines avancés</h3>
+                        <ul>
+                            <li>Tests unitaires et tests d’intégration automatisés</li>
+                            <li>Intégration de containers Docker dans les pipelines</li>
+                            <li>Déploiement automatique vers plusieurs environnements</li>
+                            <li>Gestion avancée des variables, secrets et workflows conditionnels</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-section">
+                <div class="ch">
+                    <div class="item">
+                        <h3>➕ Ressources complémentaires</h3>
+                        <ul>
+                            <li><a href="https://docs.gitlab.com/ee/ci/" target="_blank">Documentation officielle GitLab CI/CD</a></li>
+                            <li>Quelques vidéos :</li>
+                            <ul>
+                                <li>
+                                <a href="https://www.youtube.com/watch?v=qP8kir2GUgo" target="_blank">GitLab CI CD Tutorial for Beginners [Crash Course]</a><br/>
+                                Vidéo complète (~1h10) avec concepts, docker et pipeline pas à pas.
+                                </li>
+                                <li>
+                                <a href="https://www.youtube.com/watch?v=z7nLsJvEyMY" target="_blank">GitLab CI/CD Pipeline Tutorial for Beginners</a><br/>
+                                Explanations claires, concises et exemples pratiques pour débutants.
+                                </li>
+                                <li>
+                                <a href="https://www.youtube.com/watch?v=JWXVijJfnHc" target="_blank">Learn Complete GitLab CI/CD in 1 hour (2025 Edition)</a><br/>
+                                Masterclass 1h couvrant runners, variables, artefacts et déploiement.
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
