@@ -9,6 +9,6 @@ const books = [
   },
   {
     "title": "Les Misérables",
-    "author": "Briac Riaud"
+    "author": "Jean de la marre"
   }
 ];
