@@ -9,6 +9,6 @@ const books = [
   },
   {
     "title": "Les Misérables",
-    "author": "Jean de la marre ajout de commit qui sert à rien pour revert"
+    "author": "Jean de la marre"
   }
 ];
