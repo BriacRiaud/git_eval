@@ -1,0 +1,8 @@
+user-echo:
+    stage: build
+    script:
+        - echo "Bonjour utilisateur, $GITLAB_USER_LOGIN!"
+test-find-pipeline:
+    stage: test
+    script:
+        - echo "Deploiment depuis la branche $CI_COMMIT_BRANCH"
